@@ -84,8 +84,8 @@ int main(int argc, char ** argv) {
 	cudaMemcpy(d_in, h_in, ARRAY_BYTES, cudaMemcpyHostToDevice);
 	
 	
-	for(int v1=1;v1<=32;v1++){
-		for(int v2=1;v2<=1000;v2+=100){
+	for(int v1=31;v1>=1;v1-=2){
+		for(int v2=10000;v2>=1000;v2-=400){
 		
 			struct timeval  tv1, tv2;
 			gettimeofday(&tv1, NULL);
